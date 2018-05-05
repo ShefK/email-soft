@@ -1,0 +1,35 @@
+<div class="home">
+  <mat-card-content>
+      <p>
+          Configurations to Send Emails.
+        </p>
+        <br/>
+        <b>SendGrid</b>
+        <br/><br/>
+    <form>
+      <mat-form-field>
+        <mat-label>API Key</mat-label>
+        <input matInput [(ngModel)]="sendgrid.apiKey" name="apiKey">
+      </mat-form-field>
+          <mat-checkbox [(ngModel)]="sendgrid.isEnabled" name="chkEnabled">Enabled</mat-checkbox>
+      <br/><br/>
+      <b>Mailgun</b>
+      <br/><br/>
+      <mat-form-field>
+          <input matInput  [(ngModel)]="mailgun.domainName" name="domainName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput  [(ngModel)]="mailgun.apiKey" name="mailgunApiKey">
+        </mat-form-field>
+        <mat-checkbox [(ngModel)]="mailgun.isEnabled" name="mailgunEnabled">Enabled</mat-checkbox>
+      </form>
+      <div class="actions-panel">
+          <div class="actions-panel_text button-main noselect" routerLink="/send">
+            CONTINUE
+          </div>
+          <div class="actions-panel_info">
+            <md-icon>lock</md-icon>Your data will be kept safe.
+          </div>
+        </div>
+      </mat-card-content>
+</div>
